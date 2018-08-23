@@ -35,9 +35,9 @@ class BtttonePipeline(object):
         ending_str = "(" + content['title'] + content['year'] + content['country'] + content['lan'] + \
                      content['douban_link'] + content['introduce'] + content['main_actor'] + \
                      content['download_url'] + content['img_url'] + content['duration'] + content['director'] + ")"
-        print(ending_str)
+        # print(ending_str)
         sql = "INSERT INTO t_movies" + self.front_str + 'VALUE' + ending_str
-        print(sql)
+        # print(sql)
         self.mysqlTwo.sql_to_mysql(sql)
         # self.file.write()
         return item
